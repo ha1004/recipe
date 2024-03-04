@@ -95,27 +95,92 @@ main { align-items: center; justify-content: center; margin:auto}
 }
 
 .bottom-wrap {
+  
   }
 
-.bottom-nav ul { width:100%; margin-bottom: 20px;
-  
+.bottom-nav ul { width:45%; margin-bottom: 20px;
+  display: flex;
   max-width:690px; 
-  min-width:330px; 
+  min-width:330px;
   overflow: hidden; margin:auto;
   
  }
-.bottom-nav li { color:#3E3E3E;
-  float:left; margin-left: 8% ; margin-top: 30px;
+.bottom-nav li { color:#3E3E3E; flex: 1;
+   margin-top: 30px;
     align-items: center; text-align: center;
 }
-.bottom-nav li:first-child {margin-left: 16%; }
-.bottom-nav li:nth-child(4) {margin-left: 25px; }
-.bottom-nav li:nth-child(5) {margin-left: 20px; }
+
 .bottom-nav li i {font-size: 23px; color:#ffd79a;}
 .bottom-nav li p { font-size: 14px; font-weight: 600; margin-top: 5px; display:block}
 
 
 /*오늘뭐먹지*/
+
+@media(max-width:430px) {
+  .to3 {display: none;}
+  .to4 {display: none;}
+
+  .head { 
+  
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .head h3 { font-weight: 700; color:#3E3E3E;}
+  .head p { font-size: 10px; color:#F39D5E; font-weight: 500; }
+  
+  .today-wrap { height: 298px;
+    position: absolute;
+    width: 100%; left:0; right:0; 
+    background: #FFFBE8; 
+   }
+  
+   .today-w {display: flex; max-width:690px; margin:auto; 
+    padding:10px 30px 0  30px;  
+      }
+    .today {
+      margin-top: 25px;
+      display: flex; 
+      /*border:2px solid red;*/
+       width:100%; 
+       height:100%;
+      }
+  
+      .to1,.to2 {
+        flex: 1;
+        height:210px;  
+        display:grid;
+      }
+    .to2 {}
+  
+    .today-img {  }
+    .today-img img {height:150px; width:150px; border-radius: 20px;}
+      .bookmark {}
+  
+  .today-text {display: block; }  
+    .today-text h4 { color:#3E3E3E; 
+      font-size: 13px; margin-top:10px; font-weight: 500;}  
+    .today-text p {font-size: 12px; color:#aaa; margin-top:10px}  
+    .today-text ul {margin-top:10px; font-size: 11px; }  
+    .today-text ul li {
+      padding:3px 3px; color:#F39D5E; font-weight: 500;
+      border:2px solid #FFEBB8; 
+      border-radius: 31px;
+      float: left;
+      margin-right: 3px;
+    }  
+    .today-text ul li:first-child {background: #fff; border:2px solid #ffffff; }
+  
+
+}
+
+
+@media(max-width:545px) {
+  .today-w .to3 {display: none;}
+}
+
+
 
 .head { 
   
@@ -144,7 +209,7 @@ main { align-items: center; justify-content: center; margin:auto}
      height:100%;
     }
 
-    .to1,.to2 {
+    .to1,.to2 , .to3,.to4{
       flex: 1;
       height:210px;  
       display:grid;
@@ -168,6 +233,7 @@ main { align-items: center; justify-content: center; margin:auto}
     margin-right: 3px;
   }  
   .today-text ul li:first-child {background: #fff; border:2px solid #ffffff; }
+
 
 
   footer { height:500px; width:100%; }
